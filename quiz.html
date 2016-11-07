@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="style/bootstrap-3.3.7.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="lib/underscore-1.6.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
     <title>旗帜竞猜</title>
     <!--style>
     	body {
@@ -155,12 +156,22 @@
 	var rightAnswer = "";
 
 	var idx = 1;
+
+	function duplicateArray(src, dest){
+		for (var i = 0; i < src.length; i++) {
+			dest.push(src[i]);
+		}
+	}
+
+
     $('#btnnext').click(function () {
 		checkSelected();
 		if (ComingQuizs.length === 0){
-
-			window.prompt("sometext","defaultText");
-			ComingQuizs = Countries;
+			window.confirm("恭喜，你的总分为: " + score + " 分，太赞了! 再来一次！");
+			duplicateArray(Countries, ComingQuizs);
+			document.getElementById("hits").innerHTML = "开始接受挑战吧!!";
+			document.getElementById("scorePanel").innerHTML="\"IQ\": 00 ";
+			//ComingQuizs = Countries;
 			addLoadEvent(loadQuiz()); 
 			return;
 		}
@@ -183,7 +194,8 @@
       }  
     }  
 
-    ComingQuizs = Countries;
+    //ComingQuizs = Countries;
+    duplicateArray(Countries, ComingQuizs);
    	addLoadEvent(loadQuiz()); 
 
     function loadQuiz(){
@@ -215,6 +227,15 @@
 		}
         rightAnswer = file_name[0];
     }
+
+    function indexOfCountries(array, value){
+    	for (var i = 0; i < array.length; i++){
+    		if (array[i][0] == value) {
+    			return i;
+    		}
+    	}
+    	return -1;
+    }
    
     function checkSelected(){
 	    var radios = document.getElementsByTagName('input');
@@ -222,14 +243,14 @@
 		for (var i = 0; i < radios.length; i++) {
 		    if (radios[i].type === 'radio' && radios[i].checked) {
 		        value = radios[i].value;
-		        console.log(value)       
 		    }
 		}
 
 		if (rightAnswer === value) {
 			score += 20;
 			document.getElementById("hits").innerHTML = (_.sample(cheers, 1))[0];
-			var index = ComingQuizs.indexOf(value);
+			var index = indexOfCountries(ComingQuizs, value);
+
 			if (index > -1) {
 			    ComingQuizs.splice(index, 1);
 			}
