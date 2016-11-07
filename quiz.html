@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
+    <title>旗帜竞猜</title>
+    <!--style>
+    	body {
+				background:#6caec7 url(img/bg.gif) repeat;
+				color:#555;
+				font-family:Arial,Helvetica,sans-serif;
+				font-size:12px;
+			}
+    </style-->
+</head>
+<body>
+
+
+     <!-- Fixed navbar -->
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">G20峰会成员国旗帜</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="slideshow.html">浏览</a></li>
+                <li class="active"><a href="#">Quiz</a></li>
+<!--                 <li><a href="#contact">Contact</a></li> -->
+<!--                 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+ <div class="container">
+
+
+	<div class="row">
+		<div class="col-lg-8">
+			<div data-p="144.50">
+		  	<img id="flag_img" data-u="image" style="width: 600px; height: 400px;" src="g20/China.png" />
+			</div>
+		</div>	
+		<div class="col-lg-4">
+			<form>
+			  <input type="radio" name="country" value="a"> <span class="answer">A<br></span>
+			  <input type="radio" name="country" value="b"> <span class="answer">B<br></span>
+			  <input type="radio" name="country" value="c"> <span class="answer">C<br></span>
+			  <input type="radio" name="country" value="d"> <span class="answer">D</span>
+			</form>
+			
+			
+			<p><a id="btnnext" class="btn btn-lg btn-success" href="#" role="button">答题</a></p>
+		</div>
+	</div>
+
+ 	<div class="jumbotron">
+	    <p id="scorePanel">IQ: 00</p>
+        <p id="hits" class="lead">开始接受挑战吧!!</p>
+	</div>
+
+	<div class="row marketing">
+        <div class="col-lg-6">
+          <h4>答题须知</h4>
+          <p>答题错误扣10分，答题正确加20分，满分为400分，加油！！</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>技术支持</h4>
+          <p>目前版为0.01，可能会有程序错误，解决办法就是重新刷新页面即可。</p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 绿城育华亲亲 2016级一(4)班</p>
+      </footer>
+
+  </div>
+
+</body>
+
+<script type="text/javascript">
+	var Countries = [
+		["Argentina", "阿根廷"],
+		["Australia", "澳大利亚"], 
+		["Brazil", "巴西"], 
+		["Canada", "加拿大"], 
+		["China", "中国"], 
+		["European_Union", "欧盟"], 
+		["France", "法国"], 
+		["Germany", "德国"], 
+		["India", "印度"], 
+		["Indonesia", "印度尼西亚"], 
+		["Italy", "意大利"], 
+		["Japan", "日本"], 
+		["Mexico", "墨西哥"], 
+		["Russian_Federation", "俄罗斯"], 
+		["Saudi_Arabia", "沙特阿拉伯"], 
+		["South_Africa", "南非"], 
+		["South_Korea", "韩国"], 
+		["Turkey", "土耳其"], 
+		["United_Kingdom", "英国"], 
+		["United_States_of_America", "美国"]
+	];
+
+	var cheers = [
+		"+20, 太棒了，你简直是天才！！！",
+		"+20, 智商爆表，:)",
+		"+20, 亲亲，就你最厉害了。。。。",
+		"+20, 笑傲江湖!!!",
+		"+20, 海鸥中队最棒!",
+		"+20, 我的神哪，太厉害了",
+	];
+
+	var encourages = [
+		"-10, 再接再厉哦。。", 
+		"-10, 不放弃，下一次你就记住了!", 
+		"-10, 虽然有点可惜，但还是有机会的，加油！", 
+		"-10, 小脑瓜，开动起来吧!", 
+		"-10, 哦，真可惜，就差一点了", 
+		"-10, 让爸爸试一下吧，他可能也不知道，哈哈哈!"
+	];
+
+	var wrongAnswers = [];
+	var ComingQuizs = [];
+	var score = 0;
+	var rightAnswer = "";
+
+	var idx = 1;
+    $('#btnnext').click(function () {
+		checkSelected();
+		if (ComingQuizs.length === 0){
+
+			window.prompt("sometext","defaultText");
+			ComingQuizs = Countries;
+			addLoadEvent(loadQuiz()); 
+			return;
+		}
+
+		loadQuiz();
+    });
+    
+
+	function addLoadEvent(func) {  
+      var oldonload = window.onload;  
+      if (typeof window.onload != 'function') {  
+        window.onload = func;  
+      } else {  
+        window.onload = function() {  
+          if (oldonload) {  
+            oldonload();  
+          }  
+          func();  
+        }  
+      }  
+    }  
+
+    ComingQuizs = Countries;
+   	addLoadEvent(loadQuiz()); 
+
+    function loadQuiz(){
+    	//var quizNum = Math.floor(Math.random() * ComingQuizs.length);
+    	//file_name = ComingQuizs[quizNum];
+    	file_name = (_.sample(ComingQuizs, 1))[0];
+    	//console.log(file_name);
+    	//Picture Change
+    	document.getElementById("flag_img").setAttribute("src", "g20/" + file_name[0] + ".png");
+
+    	// Answer Candidates Change
+    	var radios = document.getElementsByTagName("input");
+    	var candidateLabels = document.getElementsByClassName("answer");
+		var candidates = _.sample(Countries, candidateLabels.length);
+
+        for (var i = 0; i < radios.length; i++) {
+        	if (radios[i].type === 'radio') {
+        		radios[i].value = candidates[i][0];
+        		candidateLabels[i].innerHTML = candidates[i][1] + "</br>";
+        	}
+        }
+
+        //Set Correct Answer;
+        if (candidates.indexOf(file_name) < 0){
+	        var rightAnswerIdx = Math.floor(Math.random() * candidateLabels.length);
+	        console.log(rightAnswerIdx);
+	        radios[rightAnswerIdx].value = file_name[0];
+	        candidateLabels[rightAnswerIdx].innerHTML = file_name[1] + "</br>";
+		}
+        rightAnswer = file_name[0];
+    }
+   
+    function checkSelected(){
+	    var radios = document.getElementsByTagName('input');
+		var value;
+		for (var i = 0; i < radios.length; i++) {
+		    if (radios[i].type === 'radio' && radios[i].checked) {
+		        value = radios[i].value;
+		        console.log(value)       
+		    }
+		}
+
+		if (rightAnswer === value) {
+			score += 20;
+			document.getElementById("hits").innerHTML = (_.sample(cheers, 1))[0];
+			var index = ComingQuizs.indexOf(value);
+			if (index > -1) {
+			    ComingQuizs.splice(index, 1);
+			}
+		}
+		else {
+			score -= 10;
+			document.getElementById("hits").innerHTML = (_.sample(encourages, 1))[0];
+		}
+		document.getElementById("scorePanel").innerHTML="\"IQ\": " + score;
+
+	}
+</script>
+</html>

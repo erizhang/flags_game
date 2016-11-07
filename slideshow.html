@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <!-- style>
+    	body {
+				background:#6caec7 url(img/bg.gif) repeat;
+				color:#555;
+				font-family:Arial,Helvetica,sans-serif;
+				font-size:12px;
+			}
+    </style -->
+    <title>旗帜浏览</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+
+
+
+<body style="padding:0px; margin:0px; background-color:#fff;font-family:helvetica, arial, verdana, sans-serif">
+
+
+
+     <!-- Fixed navbar -->
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">G20峰会成员国旗帜</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">浏览</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+<!--                 <li><a href="#contact">Contact</a></li> -->
+<!--                 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+
+    <!-- ================== Start Slides Gallery ==================================== -->
+    <!-- #region Jssor Slider Begin -->
+    <!-- Generator: Jssor Slider Maker -->
+    <!-- Source: http://www.jssor.com -->
+    <!-- This code works with jquery library. -->
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jssor.slider-21.1.6.mini.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Cols: 10,
+                $SpacingX: 8,
+                $SpacingY: 8,
+                $Align: 360
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 800);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
+        });
+    </script>
+    <style>
+        /* jssor slider arrow navigator skin 05 css */
+        /*
+        .jssora05l                  (normal)
+        .jssora05r                  (normal)
+        .jssora05l:hover            (normal mouseover)
+        .jssora05r:hover            (normal mouseover)
+        .jssora05l.jssora05ldn      (mousedown)
+        .jssora05r.jssora05rdn      (mousedown)
+        .jssora05l.jssora05lds      (disabled)
+        .jssora05r.jssora05rds      (disabled)
+        */
+        .jssora05l, .jssora05r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background: url('img/a17.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora05l { background-position: -10px -40px; }
+        .jssora05r { background-position: -70px -40px; }
+        .jssora05l:hover { background-position: -130px -40px; }
+        .jssora05r:hover { background-position: -190px -40px; }
+        .jssora05l.jssora05ldn { background-position: -250px -40px; }
+        .jssora05r.jssora05rdn { background-position: -310px -40px; }
+        .jssora05l.jssora05lds { background-position: -10px -40px; opacity: .3; pointer-events: none; }
+        .jssora05r.jssora05rds { background-position: -70px -40px; opacity: .3; pointer-events: none; }
+        /* jssor slider thumbnail navigator skin 01 css *//*.jssort01 .p            (normal).jssort01 .p:hover      (normal mouseover).jssort01 .p.pav        (active).jssort01 .p.pdn        (mousedown)*/.jssort01 .p {    position: absolute;    top: 0;    left: 0;    width: 72px;    height: 72px;}.jssort01 .t {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;    border: none;}.jssort01 .w {    position: absolute;    top: 0px;    left: 0px;    width: 100%;    height: 100%;}.jssort01 .c {    position: absolute;    top: 0px;    left: 0px;    width: 68px;    height: 68px;    border: #000 2px solid;    box-sizing: content-box;    background: url('img/t01.png') -800px -800px no-repeat;    _background: none;}.jssort01 .pav .c {    top: 2px;    _top: 0px;    left: 2px;    _left: 0px;    width: 68px;    height: 68px;    border: #000 0px solid;    _border: #fff 2px solid;    background-position: 50% 50%;}.jssort01 .p:hover .c {    top: 0px;    left: 0px;    width: 70px;    height: 70px;    border: #fff 1px solid;    background-position: 50% 50%;}.jssort01 .p.pdn .c {    background-position: 50% 50%;    width: 68px;    height: 68px;    border: #000 2px solid;}* html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {    /* ie quirks mode adjust */    width /**/: 72px;    height /**/: 72px;}
+    </style>
+
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 556px; overflow: hidden; visibility: hidden; background-color: #24262e;">
+    <!-- Loading Screen -->
+    <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+        <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+    </div>
+
+
+    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden;">
+        <a data-u="any" href="http://www.jssor.com" style="display:none">Image Gallery</a>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Argentina.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Argentina.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Argentina, 阿根廷
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Australia.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Australia.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Australia, 澳大利亚
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Brazil.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Brazil.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Brazil, 巴西
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Canada.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Canada.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Canada, 加拿大
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/China.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-China.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        China, 中国
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/European_Union.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-European_Union.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        European Union, 欧盟
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/France.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-France.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        France, 法国
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Germany.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Germany.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Germany, 德国
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/India.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-India.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        India, 印度
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Indonesia.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Indonesia.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Indonesia, 印度尼西亚
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Italy.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Italy.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Italy, 意大利
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Japan.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Japan.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Japan, 日本
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Mexico.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Mexico.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Mexico, 墨西哥
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Russian_Federation.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Russian_Federation.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Russian Federation, 俄罗斯
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Saudi_Arabia.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Saudi_Arabia.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Saudi Arabia, 沙特阿拉伯
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/South_Africa.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-South_Africa.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        South Africa, 南非
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/South_Korea.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-South_Korea.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        South Korea, 韩国
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/Turkey.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-Turkey.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        Turkey, 土耳其
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/United_Kingdom.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-United_Kingdom.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        United Kingdom, 英国
+					    </div>
+					</div>
+					<div data-p="144.50">
+					    <img data-u="image" src="g20/United_States_of_America.png" />
+					    <img data-u="thumb" src="g20/thumb/thumb-United_States_of_America.png" />
+					    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					        United States of America, 美国
+					    </div>
+					</div>
+
+    </div>
+
+
+    <!-- Thumbnail Navigator -->
+    <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
+        <!-- Thumbnail Item Skin Begin -->
+        <div data-u="slides" style="cursor: default;">
+            <div data-u="prototype" class="p">
+                <div class="w">
+                    <div data-u="thumbnailtemplate" class="t"></div>
+                </div>
+                <div class="c"></div>
+            </div>
+        </div>
+        <!-- Thumbnail Item Skin End -->
+    </div>
+    <!-- Arrow Navigator -->
+    <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
+    <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+	</div>
+	<!-- #endregion Jssor Slider End -->
+
+	<!-- ================== End of Slides Gallery ==================================== -->
+
+
+
+	<div class="container">
+      <div class="row marketing">
+
+        <div class="col-lg-6">
+          <h4>浙江省，杭州市</h4>
+          <p>杭州市简称杭，位于中华人民共和国东南沿海、浙江省北部，钱塘江下游北岸，京杭大运河南端。是浙江省省会，副省级城市之一，浙江省交通枢纽、长三角南翼的中心城市，浙江省的政治、经济、文化和金融中心，中国重要的电子商务中心，国际知名的旅游城市。下辖9区、2个县级市和2个县，总面积16596平方公里，其中市区面积4876平方公里，2015年常住人口901.8万，其中市区721.3万，按城镇人口计算城市规模为华东地区第三，仅仅次于上海，南京</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>G20峰会</h4>
+          <p>G20峰会是一个国际经济合作论坛，于1999年12月16日在德国柏林成立，属于布雷顿森林体系框架内非正式对话的一种机制，由原八国集团以及其余十二个重要经济体组成。G20金融峰会旨在推动以工业化的发达国家和新兴市场国家之间就实质性问题进行开放及有建设性的讨论和研究，以寻求合作并促进国际金融稳定和经济的持续增长。按照以往惯例，国际货币基金组织与世界银行列席该组织的会议。
+2012年6月，在墨西哥举行的G20峰会上，中国宣布支持并决定参与国际货币基金组织增资，数额为430亿美元。2016年9月，G20峰会在中国杭州举行。.</p>
+
+        </div>
+
+
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 绿城育华亲亲 2016级一(4)班</p>
+      </footer>
+    </div> <!-- /container -->
+</body>
+</html>
