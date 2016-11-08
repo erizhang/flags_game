@@ -51,14 +51,18 @@
 
  <div class="container">
 
-	<div class="col-lg-12">
-		<div class="progress">
-		  <div id="inprogress" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-		    <span class="sr-only">40% Complete (success)</span>
-		  </div>
+	 <div class="row">
+		<div class="col-lg-10">
+			<div class="progress">
+			  <div id="inprogress" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+			    <span class="sr-only">40% Complete (success)</span>
+			  </div>
+			</div>
+		</div>
+		<div class="col-lg-2">
+			<p id="scorePanel" align="center">总分是： <b><font color=red>0</font></b> 分<p>
 		</div>
 	</div>
-
 
 	<div class="row">
 		
@@ -85,7 +89,7 @@
 			</div>
 			<div class="row">
 					<h3 id="hits" align="center">开始接受挑战吧！</h3>
-					<h3 id="scorePanel" align="center">总分是： <b><font color=red>0</font></b> 分<h3>
+					
 			</div>
 		</div>
 	</div>
@@ -268,7 +272,6 @@
 		document.getElementById("inprogress").setAttribute("style", "width:" + percentage + "%");
 		if (percentage == 100){
 			document.getElementById("btnnext").innerHTML = "再来一局";
-			window.confirm("恭喜你，本轮的总分是:" + score + "! :p");
 		}
 	}
 </script>
