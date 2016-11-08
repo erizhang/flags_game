@@ -84,15 +84,8 @@
 			</form>
 			</div>
 			<div class="row">
-				<br>
-				   
-			        <!-- <button class="btn btn-primary" type="button">
-					  IQ: <span id="scorePanel" class="badge">00</span>
-					</button> -->
-					<!-- span class="glyphicon glyphicon-star" aria-hidden="true"></span>  -->
-					<br>
-					<!-- <span id="hits" class="label label-success">开始接受挑战吧！</span> -->
-					<h3 id="hits">开始接受挑战吧！</h3>
+					<h3 id="hits" align="center">开始接受挑战吧！</h3>
+					<h3 id="scorePanel" align="center">总分是： <b><font color=red>0</font></b> 分<h3>
 			</div>
 		</div>
 	</div>
@@ -176,10 +169,9 @@
 
     $('#btnnext').click(function () {
     	if (ComingQuizs.length === 0){
-			//window.confirm("恭喜，你的总分为: " + score + " 分，太赞了! 再来一次！");
 			duplicateArray(Countries, ComingQuizs);
 			document.getElementById("hits").innerHTML = "开始接受挑战吧!!";
-			//document.getElementById("scorePanel").innerHTML="00";
+			document.getElementById("scorePanel").innerHTML="总分是：<b><font color=red>0</font></b>  分";
 			document.getElementById("inprogress").setAttribute("style", "width: 0%")
 			document.getElementById("btnnext").innerHTML = "答题";
 			score = 0;
@@ -207,15 +199,12 @@
       }  
     }  
 
-    //ComingQuizs = Countries;
     duplicateArray(Countries, ComingQuizs);
    	addLoadEvent(loadQuiz()); 
 
     function loadQuiz(){
-    	//var quizNum = Math.floor(Math.random() * ComingQuizs.length);
-    	//file_name = ComingQuizs[quizNum];
     	file_name = (_.sample(ComingQuizs, 1))[0];
-    	//console.log(file_name);
+
     	//Picture Change
     	document.getElementById("flag_img").setAttribute("src", "g20/" + file_name[0] + ".png");
 
@@ -262,7 +251,7 @@
 
 		if (rightAnswer === value) {
 			score += 20;
-			document.getElementById("hits").innerHTML = (_.sample(cheers, 1))[0] + "<br>   总分是：" + score;
+			document.getElementById("hits").innerHTML = (_.sample(cheers, 1))[0];
 			var index = indexOfCountries(ComingQuizs, value);
 
 			if (index > -1) {
@@ -271,9 +260,9 @@
 		}
 		else {
 			score -= 10;
-			document.getElementById("hits").innerHTML = (_.sample(encourages, 1))[0] + "<br>   总分是：" + score;
+			document.getElementById("hits").innerHTML = (_.sample(encourages, 1))[0];
 		}
-		//document.getElementById("scorePanel").innerHTML=score;
+		document.getElementById("scorePanel").innerHTML = "总分是：<b><font color=red>" + score + "</font></b> 分";
 		var percentage = (Countries.length - ComingQuizs.length) / Countries.length * 100;
 		console.log(percentage);
 		document.getElementById("inprogress").setAttribute("style", "width:" + percentage + "%");
