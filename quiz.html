@@ -40,19 +40,7 @@
               <ul class="nav navbar-nav">
                 <li><a href="slideshow.html">浏览</a></li>
                 <li class="active"><a href="#">Quiz</a></li>
-<!--                 <li><a href="#contact">Contact</a></li> -->
-<!--                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li> -->
+     
               </ul>
             </div>
           </div>
@@ -98,9 +86,9 @@
 			<div class="row">
 				<br>
 				   
-			        <button class="btn btn-primary" type="button">
+			        <!-- <button class="btn btn-primary" type="button">
 					  IQ: <span id="scorePanel" class="badge">00</span>
-					</button>
+					</button> -->
 					<!-- span class="glyphicon glyphicon-star" aria-hidden="true"></span>  -->
 					<br>
 					<!-- <span id="hits" class="label label-success">开始接受挑战吧！</span> -->
@@ -191,7 +179,7 @@
 			//window.confirm("恭喜，你的总分为: " + score + " 分，太赞了! 再来一次！");
 			duplicateArray(Countries, ComingQuizs);
 			document.getElementById("hits").innerHTML = "开始接受挑战吧!!";
-			document.getElementById("scorePanel").innerHTML="00";
+			//document.getElementById("scorePanel").innerHTML="00";
 			document.getElementById("inprogress").setAttribute("style", "width: 0%")
 			document.getElementById("btnnext").innerHTML = "答题";
 			score = 0;
@@ -274,7 +262,7 @@
 
 		if (rightAnswer === value) {
 			score += 20;
-			document.getElementById("hits").innerHTML = (_.sample(cheers, 1))[0];
+			document.getElementById("hits").innerHTML = (_.sample(cheers, 1))[0] + "<br>   总分是：" + score;
 			var index = indexOfCountries(ComingQuizs, value);
 
 			if (index > -1) {
@@ -283,16 +271,16 @@
 		}
 		else {
 			score -= 10;
-			document.getElementById("hits").innerHTML = (_.sample(encourages, 1))[0];
+			document.getElementById("hits").innerHTML = (_.sample(encourages, 1))[0] + "<br>   总分是：" + score;
 		}
-		document.getElementById("scorePanel").innerHTML=score;
+		//document.getElementById("scorePanel").innerHTML=score;
 		var percentage = (Countries.length - ComingQuizs.length) / Countries.length * 100;
 		console.log(percentage);
 		document.getElementById("inprogress").setAttribute("style", "width:" + percentage + "%");
 		if (percentage == 100){
 			document.getElementById("btnnext").innerHTML = "再来一局";
+			window.confirm("恭喜你，本轮的总分是:" + score + "! :p");
 		}
-
 	}
 </script>
 </html>
