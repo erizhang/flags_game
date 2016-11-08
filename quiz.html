@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		<div class="col-lg-2">
-			<p id="scorePanel" align="center">总分是： <b><font color=red>0</font></b> 分<p>
+			<p id="scorePanel" align="center">总分是： <b><font color=red>0</font></b>/400 分<p>
 		</div>
 	</div>
 
@@ -175,7 +175,7 @@
     	if (ComingQuizs.length === 0){
 			duplicateArray(Countries, ComingQuizs);
 			document.getElementById("hits").innerHTML = "开始接受挑战吧!!";
-			document.getElementById("scorePanel").innerHTML="总分是：<b><font color=red>0</font></b>  分";
+			document.getElementById("scorePanel").innerHTML="总分是：<b><font color=red>0</font></b>/400  分";
 			document.getElementById("inprogress").setAttribute("style", "width: 0%")
 			document.getElementById("btnnext").innerHTML = "答题";
 			score = 0;
@@ -266,12 +266,13 @@
 			score -= 10;
 			document.getElementById("hits").innerHTML = (_.sample(encourages, 1))[0];
 		}
-		document.getElementById("scorePanel").innerHTML = "总分是：<b><font color=red>" + score + "</font></b> 分";
+		document.getElementById("scorePanel").innerHTML = "总分是：<b><font color=red>" + score + "</font></b>/400 分";
 		var percentage = (Countries.length - ComingQuizs.length) / Countries.length * 100;
 		console.log(percentage);
 		document.getElementById("inprogress").setAttribute("style", "width:" + percentage + "%");
 		if (percentage == 100){
 			document.getElementById("btnnext").innerHTML = "再来一局";
+			document.getElementById("hits").innerHTML = "本轮结束!!";
 		}
 	}
 </script>
